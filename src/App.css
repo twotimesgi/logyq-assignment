@@ -1,0 +1,13 @@
+.my-card{
+    max-width: 750px;
+}
+
+@media screen and (max-width: 750px) {
+    .card.my-card{
+        border: 0;
+    }
+}
+
+.my-bold{
+    font-weight: 600;
+}
