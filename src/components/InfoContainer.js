@@ -87,8 +87,8 @@ function InfoContainer(props) {
                     <Row className="py-4 border-top">
                         <h5 className="mb-1">Date trattamenti</h5>
                         <Col md={12}>
-                            {Object.keys(props.data.trattamenti).map((key) => {
-                                if (key.includes('st') || key.includes('nd') || key.includes('th') || key.includes('rd')) {
+                            { Object.keys(props.data.trattamenti).map((key) => {
+                                if (key.match(/[0-9]+th|nd|st|rd/gi)) {
                                     return (
                                         <Badge bg="secondary" className="p-2 m-1" key={key}>{props.data.trattamenti[key]}</Badge>
                                     )
